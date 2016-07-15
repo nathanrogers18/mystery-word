@@ -8,6 +8,7 @@ Due Sunday at Midnight
 1. What test functions should I write?  Do I need a test function for
     test every function
     test edge cases (e.g. for integer: test odd and even, negative and positive)
+
 ### Next Steps
 1. Write test functions
 2. Update README.md
@@ -131,7 +132,7 @@ def main():
             print("Please follow instructions.")
 
     if guesses == 0:
-        print("Sorry, you lose! The correct word was '{}'.").format(answer)
+        print("Sorry, you lose! The correct word was '{}'.".format(answer))
 
 """
 Let the user choose a level of difficulty at the beginning of the program.
