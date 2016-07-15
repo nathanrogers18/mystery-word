@@ -6,8 +6,7 @@ class TestGetWordList(unittest.TestCase):
     def test_list_created(self):
         test_word_list = get_word_list()
         self.assertTrue(len(test_word_list) > 0 and
-                        type(test_word_list) == isinstance(test_word_list,
-                                                           list))
+                        isinstance(test_word_list, list))
 
 class TestIsEasyWord(unittest.TestCase):
     def test_too_small(self):
