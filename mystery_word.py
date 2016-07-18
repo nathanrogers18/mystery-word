@@ -3,22 +3,6 @@ Nathan Rogers
 Mystery Word
 July 15, 2016
 Due Sunday at Midnight
-
-### Questions/Assumptions
-1. What test functions should I write?  Do I need a test function for
-    test every function
-    test edge cases (e.g. for integer: test odd and even, negative and positive)
-
-### Next Steps
-1. finish test functions
-2. Update README.md
-3. Push to github repo
-4. Advanced Mode (optional)
-
-Implement the evil version of this game.
-Write it in a new Python program named evil_mystery_word.py.
-Write tests for new functionality you introduce in evil_mystery_word_tests.py.
-
 """
 
 import random
@@ -28,6 +12,7 @@ def get_word_list():
     """Returns a list of words from computer's dictionary file"""
     with open('/usr/share/dict/words' , 'r') as word_file:
         word_list = word_file.readlines()
+        word_list = [word.strip().lower() for word in word_list]
         return word_list
 
 
@@ -93,7 +78,7 @@ def get_answer():
     else:
         word_list = get_easy_words(word_list)
 
-    answer = get_random_word(word_list).strip().lower()
+    answer = get_random_word(word_list)
     print("The computer answer is {} letters long.".format(len(answer)))
     return answer
 
@@ -120,6 +105,7 @@ def main():
                         guesses -= 1
                     if word_guessed(answer, guessed_letter_list):
                         print("You have won the game!")
+                        print(display_word(answer, guessed_letter_list))
                         break
                     print(display_word(answer, guessed_letter_list))
             else:
