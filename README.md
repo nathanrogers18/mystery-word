@@ -1,5 +1,9 @@
 #  Mystery Word
 
+##Notes
+I've completed mystery_word, and given evil_mystery_word a shot, but it is incomplete.
+
+## Description (From Assignment)
 You will implement the game Mystery Word. In your game, you will be playing against the computer.
 
 The computer must select a word at random from the list of words in the file /usr/share/dict/words. This file exists on your computer already.
